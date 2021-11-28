@@ -11,7 +11,9 @@ const getToken = () => {
 
 const isLogin = () => {
     const jwToken = getToken();
-    return !!jwToken && !isTokenExpired(jwToken);
+    console.log(jwToken)
+    return !!jwToken && !isTokenExpired(jwToken);  // !!jwToken represtents a token string that the length is great than 0;
+    // ! can change the varaible to a boolean, null and undefined and "" is false, others are true
 };
 
 const isTokenExpired = token => {
