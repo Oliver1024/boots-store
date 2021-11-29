@@ -4,7 +4,8 @@ import _axios from 'axios';
 // step2: handle the access
 const axios = baseURL => {
   const instance = _axios.create({
-    baseURL: baseURL || 'http://localhost:3300',
+    baseURL: process.env.REACT_APP_API_DOMAIN || "http://localhost:3300",
+    // baseURL: "http://localhost:3300",
     timeout: 1000
   });
 
